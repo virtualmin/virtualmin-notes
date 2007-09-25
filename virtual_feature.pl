@@ -21,15 +21,17 @@ sub theme_sections
 local ($info, $txt) = &get_admin_note();
 local $html;
 $html .= &ui_form_start("$module_name/save.cgi", "post");
-$html .= &ui_table_start(undef, undef, 2);
+$html .= &ui_table_start(undef, undef, 2, [ "nowrap" ]);
 $html .= &ui_table_row($text{'right_name'},
-		       &ui_textbox("name", $info->{'name'}, 50));
+		       &ui_textbox("name", $info->{'name'}, 50, 0, undef,
+				   "style='width:100%'"));
 if ($info->{'time'}) {
 	$html .= &ui_table_row($text{'right_time'},
 			       &make_date($info->{'time'}));
 	}
 $html .= &ui_table_row($text{'right_note'},
-		       &ui_textarea("note", $txt, 10, 80));
+		       &ui_textarea("note", $txt, 10, 80, undef, 0,
+				    "style='width:100%'"));
 $html .= &ui_table_end();
 $html .= &ui_form_end([ [ undef, $text{'save'} ] ]);
 local $status = $txt =~ /\S/ ? 1 : 0;
