@@ -1,4 +1,5 @@
 desc=Virtualmin Admin Notes
+desc_de=Virtualmin Admin-Hinweise
 depends=virtual-server/3.47
 category=webmin
 hidden=1
