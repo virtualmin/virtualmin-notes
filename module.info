@@ -3,6 +3,6 @@ desc_de=Virtualmin Admin-Hinweise
 depends=virtual-server/3.47
 category=webmin
 hidden=1
-version=1.1
+version=1.2
 desc_nl=Virtualmin Admin Notities
 feedback=jcameron@webmin.com
