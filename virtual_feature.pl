@@ -9,6 +9,12 @@ sub feature_name
 return $text{'feat_name'};
 }
 
+# Called by Cloudmin
+sub plugin_desc
+{
+return &feature_name();
+}
+
 # theme_sections()
 # If defined, should return a list of extra sections to be displayed (typically
 # on the right-hand frame) of a theme. Each must be a hash ref containing the
