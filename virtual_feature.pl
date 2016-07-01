@@ -1,4 +1,8 @@
 # Defines functions for this feature
+use strict;
+use warnings;
+our (%text);
+our $module_name;
 
 require 'virtualmin-notes-lib.pl';
 
@@ -24,8 +28,8 @@ return &feature_name();
 # visible to master admins, resellers and domain owners.
 sub theme_sections
 {
-local ($info, $txt) = &get_admin_note();
-local $html;
+my ($info, $txt) = &get_admin_note();
+my $html;
 $html .= &ui_form_start("$module_name/save.cgi", "post");
 $html .= &ui_table_start(undef, undef, 2, [ "nowrap" ]);
 $html .= &ui_table_row($text{'right_name'},
@@ -40,7 +44,7 @@ $html .= &ui_table_row($text{'right_note'},
 				    "style='width:100%'"));
 $html .= &ui_table_end();
 $html .= &ui_form_end([ [ undef, $text{'save'} ] ]);
-local $status = $txt =~ /\S/ ? 1 : 0;
+my $status = $txt =~ /\S/ ? 1 : 0;
 return ( { 'name' => $module_name,
 	   'title' => $text{'right_title'},
 	   'html' => $html,
@@ -49,4 +53,3 @@ return ( { 'name' => $module_name,
 }
 
 1;
-
