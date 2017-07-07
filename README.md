@@ -1,7 +1,7 @@
 # virtualmin-notes
 Virtualmin plugin for keeping notes
 
-This is a Virtualmin plugin (which is a Webmin module with some meta data and methods to integrate it with Virtualmin) that provides a simple UI for leaving notes on the dashboard for yoursel or other administrators. It's also probably a pretty good "first plugin" to look  at because it does almost nothing, and ties into the virtualmin UI.
+This is a Virtualmin plugin (which is a Webmin module with some meta data and methods to integrate it with Virtualmin) that provides a simple UI for leaving notes on the dashboard for yourself or other administrators. It's also probably a pretty good "first plugin" to look  at because it does almost nothing, and ties into the virtualmin UI.
 
 # Installation
 
