@@ -44,7 +44,7 @@ $html .= &ui_table_row($text{'right_note'},
 				    "style='width:100%'"));
 $html .= &ui_table_end();
 $html .= &ui_form_end([ [ undef, $text{'save'} ] ]);
-my $status = $txt =~ /\S/ ? 1 : 0;
+my $status = ($txt && $txt =~ /\S/) ? 1 : 0;
 return ( { 'name' => $module_name,
 	   'title' => $text{'right_title'},
 	   'html' => $html,
